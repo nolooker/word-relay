@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>끝말잇기</title>
+</head>
+
+<body>
+    <div><span id="order">1</span>번째 참가자</div>
+    <div>제시어 : <span id="word"></span></div>
+    <input type="text">
+    <button>입력</button>
+    <button>버튼2</button>
+    <button>버튼3</button>
+    <script>
+        const number = Number(prompt('몇 명이 참가하나요?'));
+        console.log('number', number);
+        alert(number);
+        //confirm('사용자에게 표시할 메시지');
+        
+        const onClickButton = () => {
+            console.log('버튼 클릭');
+        };
+
+        const $button = document.querySelector('button');
+        $button.addEventListener('click', onClickButton);
+        console.log($button);
+
+        const onInput = (event) => {
+            console.log('글자 입력', event.target.value);
+        };
+
+        const $input = document.querySelector('input');
+        $input.addEventListener('input', onInput);
+
+    </script>
+</body>
+</html>
